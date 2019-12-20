@@ -1,1 +1,17 @@
 {{outlet}}
+
+<form action={{model.lastObject.actions.submit}}>
+  {{#each model.firstObject.schema as |element|}}
+    <p>
+      <label for={{element.id}}>{{element.title}}</label><br>
+      {{input 
+        id=element.id
+        type=element.type
+        name=element.name
+        max=(if element.maximum element.maximum)
+        maxlength=(if element.maxlength element.maxlength)
+        }}
+    </p>
+  {{/each}}
+  <button type="submit">Ok</button>
+</form>
