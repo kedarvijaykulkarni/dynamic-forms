@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/roboto/Roboto-Medium.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/assets/fonts/roboto/Roboto-Medium.woff2) format('woff2'),
+    url(/assets/fonts/roboto/Roboto-Medium.woff) format('woff'),
+    url(/assets/fonts/roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/roboto/Roboto-Light.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/assets/fonts/roboto/Roboto-Light.woff2) format('woff2'),
+    url(/assets/fonts/roboto/Roboto-Light.woff) format('woff'),
+    url(/assets/fonts/roboto/Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/assets/fonts/roboto/Roboto-Bold.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/assets/fonts/roboto/Roboto-Bold.woff2) format('woff2'),
+    url(/assets/fonts/roboto/Roboto-Bold.woff) format('woff'),
+    url(/assets/fonts/roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+body, html {
+	color: #263238;
+	font-family: 'Roboto Light';
+}
+
+a {
+	color: #1d659a;
+	text-decoration: none;
+	&:hover, &:focus, &:visited {
+		color: #185581;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}
