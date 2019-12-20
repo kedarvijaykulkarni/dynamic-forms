@@ -67,11 +67,14 @@ nav {
     margin: 0;
     padding: 1rem;
     list-style: none;
-    li a {
-      color: white;
-      font-weight: 500;
-      &:hover, &:focus, &:visited {
+    li {
+      display: inline-block;
+      a {
         color: white;
+        font-weight: 500;
+        &:hover, &:focus, &:visited {
+          color: white;
+        }
       }
     }
   }
