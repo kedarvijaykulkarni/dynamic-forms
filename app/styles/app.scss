@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Roboto Medium';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   src: url(/assets/fonts/roboto/Roboto-Medium.eot); /* For IE6-8 */
   src: local('Material Icons'),
     local('MaterialIcons-Regular'),
@@ -13,7 +13,7 @@
 @font-face {
   font-family: 'Roboto Light';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   src: url(/assets/fonts/roboto/Roboto-Light.eot); /* For IE6-8 */
   src: local('Material Icons'),
     local('MaterialIcons-Regular'),
@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'Roboto Bold';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   src: url(/assets/fonts/roboto/Roboto-Bold.eot); /* For IE6-8 */
   src: local('Material Icons'),
     local('MaterialIcons-Regular'),
@@ -35,8 +35,11 @@
 }
 
 body, html {
+  background: #eceff1;
 	color: #263238;
 	font-family: 'Roboto Light';
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -48,4 +51,28 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 2rem;
+  background: white;
+  height: calc(100vh - 121px);
+}
+
+nav {
+  background: #263238;
+  ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    li a {
+      color: white;
+      font-weight: 500;
+      &:hover, &:focus, &:visited {
+        color: white;
+      }
+    }
+  }
 }
