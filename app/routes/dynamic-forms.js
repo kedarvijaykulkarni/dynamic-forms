@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 
+
 export default Route.extend({
   model() {
     return [
@@ -64,6 +65,7 @@ export default Route.extend({
             "title":"Job role",
             "type":"select",
             "name": "job-role",
+            "id": "jobRole",
             "enum":['Designer','Developer', 'Tester']
           }
         ]
