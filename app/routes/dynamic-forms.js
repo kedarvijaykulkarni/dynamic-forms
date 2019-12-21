@@ -9,7 +9,7 @@ const jsonform = [
             "type": "text",
             "key": "firstName",
             "name": "first-name",
-            "maxlength": 5,
+            "maxlength": 50,
             "required": true,
             "placeholder": "Enter first your name",
             "attributes": {

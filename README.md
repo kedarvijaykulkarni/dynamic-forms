@@ -25,9 +25,9 @@ The goal is to generate form using JSON schema passed to an ember component.
 ## Installation
 
 1) `git clone git@github.com:kedarvijaykulkarni/dynamic-forms.git` this repository [SSH]
-   `git clone https://github.com/kedarvijaykulkarni/dynamic-forms.git` this repository [HTTPS]
-2) `cd dynamic-forms`
-3) `npm install`
+2) `git clone https://github.com/kedarvijaykulkarni/dynamic-forms.git` this repository [HTTPS]
+3) `cd dynamic-forms`
+4) `npm install`
 
 
 ## Running
