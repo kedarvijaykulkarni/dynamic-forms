@@ -51,6 +51,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
+    "ember-truth-helpers": "^2.1.0",
     "tachyons-sass": "^4.9.5"
   }
 }

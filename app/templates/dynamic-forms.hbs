@@ -1,0 +1,37 @@
+{{outlet}}
+
+<form action={{model.lastObject.actions.submit}}>
+  {{#each elements as |element|}}
+    <p>
+      <label for={{element.id}}>{{element.title}}</label><br>
+      {{#if (eq element.type "radio")}}
+        {{#each element.enum as |item|}}
+          {{input
+            type="radio"
+            name=element.name
+            value=item class="dib"}} {{item}}
+        {{/each}}
+      {{else if (eq element.type "select")}}
+        <select name={{element.name}} onchange={{action (mut selectedItemId) value="target.value" }}>
+          {{#each element.enum as |item|}}
+            <option value={{item}}>{{item}}</option>
+          {{/each}}
+        </select>
+      {{else}}
+        {{input 
+          id=element.key
+          type=element.type
+          name=element.name
+          max=(if element.maximum element.maximum)
+          maxlength=(if element.maxlength element.maxlength)
+          required=(if element.required element.required)
+          placeholder=(if element.placeholder element.placeholder)
+          value=(get model.data  (concat "" element.key))
+          }}
+      {{/if}}
+    </p>
+  {{/each}}
+  <button type="submit">Ok</button>
+</form>
+
+

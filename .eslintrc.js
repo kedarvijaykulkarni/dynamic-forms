@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    server: true
+  },
   root: true,
   parserOptions: {
     ecmaVersion: 2017,
@@ -15,6 +18,7 @@ module.exports = {
     browser: true
   },
   rules: {
+    "no-trailing-spaces": "error"
   },
   overrides: [
     // node files
@@ -26,7 +30,8 @@ module.exports = {
         'testem.js',
         'blueprints/*/index.js',
         'config/**/*.js',
-        'lib/*/index.js'
+        'lib/*/index.js',
+        'server/**/*.js'
       ],
       parserOptions: {
         sourceType: 'script',

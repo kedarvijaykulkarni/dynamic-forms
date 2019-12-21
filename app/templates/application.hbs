@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<nav>
+  <ul>
+    <li>
+      <img src="/assets/images/bloowatch-logo2.png" alt="">
+    </li>
+  </ul>
+</nav>
+<main class="container">
+  {{#link-to "dynamic-forms"}} Dynamic Forms {{/link-to}}
+  {{outlet}}
+</main>
