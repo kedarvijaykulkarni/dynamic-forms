@@ -7,11 +7,12 @@ export default Route.extend({
         "schema": [
           {
             "title": "First Name",
-            "type": "string",
+            "type": "text",
             "id": "firstName",
             "name": "first-name",
             "maxlength": 5,
             "required": true,
+            "placeholder": "Enter first your name",
             "attributes": {
               "data-test": "test-first-name",
               "class": "input-element"
@@ -19,9 +20,10 @@ export default Route.extend({
           },
           {
             "title": "Last Name",
-            "type": "string",
+            "type": "text",
             "id": "lastName",
             "name": "last-name",
+            "placeholder": "Enter last your name",
             "maxlength": 50,
             "required": true,
             "attributes": {
@@ -34,11 +36,19 @@ export default Route.extend({
             "type": "email",
             "id": "email",
             "name": "email",
+            "placeholder": "Enter your email",
             "required": true,
             "attributes": {
               "data-test": "test-email",
               "class": "input-element"
             }
+          },
+          {
+            "title":"Gender",
+            "type":"radio",
+            "id": "gender",
+            "name": "gender",
+            "enum":['Male','Female']
           },
           {
             "title": "Birthday",
@@ -49,12 +59,18 @@ export default Route.extend({
               "data-test": "test-email",
               "class": "input-element"
             }
+          },
+          {
+            "title":"Job role",
+            "type":"select",
+            "name": "job-role",
+            "enum":['Designer','Developer', 'Tester']
           }
         ]
       },
       {
         "actions": {
-          "submit": "onSubmitAction"
+          "submit": "submit-application"
         }
       }
     ]

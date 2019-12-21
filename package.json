@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "ember-json-form": "^0.1.3",
+    "ember-truth-helpers": "^2.1.0",
     "tachyons-sass": "^4.9.5"
   }
 }
