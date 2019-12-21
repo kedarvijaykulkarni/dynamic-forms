@@ -1,15 +1,13 @@
 import Route from '@ember/routing/route';
+import EmberObject from '@ember/object';
 
-
-export default Route.extend({
-  model() {
-    return [
+const jsonform = [
       {
         "schema": [
           {
             "title": "First Name",
             "type": "text",
-            "id": "firstName",
+            "key": "firstName",
             "name": "first-name",
             "maxlength": 5,
             "required": true,
@@ -22,7 +20,7 @@ export default Route.extend({
           {
             "title": "Last Name",
             "type": "text",
-            "id": "lastName",
+            "key": "lastName",
             "name": "last-name",
             "placeholder": "Enter last your name",
             "maxlength": 50,
@@ -35,7 +33,7 @@ export default Route.extend({
           {
             "title": "Email",
             "type": "email",
-            "id": "email",
+            "key": "email",
             "name": "email",
             "placeholder": "Enter your email",
             "required": true,
@@ -47,14 +45,14 @@ export default Route.extend({
           {
             "title":"Gender",
             "type":"radio",
-            "id": "gender",
+            "key": "gender",
             "name": "gender",
             "enum":['Male','Female']
           },
           {
             "title": "Birthday",
             "type": "date",
-            "id": "birthDate",
+            "key": "birthDate",
             "name": "birth-date",
             "attributes": {
               "data-test": "test-email",
@@ -65,7 +63,7 @@ export default Route.extend({
             "title":"Job role",
             "type":"select",
             "name": "job-role",
-            "id": "jobRole",
+            "key": "jobRole",
             "enum":['Designer','Developer', 'Tester']
           }
         ]
@@ -75,7 +73,24 @@ export default Route.extend({
           "submit": "submit-application"
         }
       }
-    ]
+    ];
+
+export default Route.extend({
+  model() {
+
+    const data = EmberObject.create({
+      firstName: 'Todd',
+      lastName: 'Jordan',
+      email: 'email@gmail.com',
+      gender: 'Male',
+      birthDate: null,
+      jobRole: 'Developer',
+    });
+
+    return {
+      jsonform,
+      data
+    }
   }
 
 });
