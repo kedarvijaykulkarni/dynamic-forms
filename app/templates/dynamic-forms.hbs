@@ -1,5 +1,6 @@
 {{outlet}}
 
+
 <form id="dynamic-form" {{action "onSubmit" on="submit"}}>
   {{!-- <form action={{model.jsonform.lastObject.actions.submit}}> --}}
   {{#each elements as |element|}}
@@ -14,7 +15,6 @@
             name={{element.key}}
             value={{item}}>
           {{item}} <br>
-
         {{/each}}
       {{else if (eq element.type "select")}}
         <select name={{element.name}} onchange={{action (mut selectedItemId) value="target.value" }}>

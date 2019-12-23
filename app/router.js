@@ -8,7 +8,6 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('dynamic-forms');
-  this.route('submit-data');
 });
 
 export default Router;

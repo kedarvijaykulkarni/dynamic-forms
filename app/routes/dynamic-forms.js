@@ -67,11 +67,6 @@ const jsonform = [
             "enum":['Designer','Developer', 'Tester']
           }
         ]
-      },
-      {
-        "actions": {
-          "submit": "submit-data"
-        }
       }
     ];
 
@@ -79,11 +74,11 @@ export default Route.extend({
   model() {
 
     const data = EmberObject.create({
-      firstName: 'Todd',
-      lastName: 'Jordan',
-      email: 'email@gmail.com',
+      firstName: 'Kedar',
+      lastName: 'Kulkarni',
+      email: 'kedarvijaykulkarni@gmail.com',
       gender: 'Male',
-      birthDate: '1985-11-23',
+      birthDate: '1981-07-15',
       jobRole: 'Developer',
     });
 
