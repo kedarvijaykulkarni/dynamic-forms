@@ -83,7 +83,7 @@ export default Route.extend({
       lastName: 'Jordan',
       email: 'email@gmail.com',
       gender: 'Male',
-      birthDate: null,
+      birthDate: '1985-11-23',
       jobRole: 'Developer',
     });
 

@@ -6,15 +6,21 @@
       <label for={{element.id}}>{{element.title}}</label><br>
       {{#if (eq element.type "radio")}}
         {{#each element.enum as |item|}}
-          {{input
+          <input 
             type="radio"
-            name=element.name
-            value=item class="dib"}} {{item}}
+            class="dib" 
+            checked={{if (eq item (get model.data  (concat "" element.key))) true false}}
+            name={{element.key}}
+            value={{item}}> {{item}} <br/>
+
         {{/each}}
       {{else if (eq element.type "select")}}
         <select name={{element.name}} onchange={{action (mut selectedItemId) value="target.value" }}>
           {{#each element.enum as |item|}}
-            <option value={{item}}>{{item}}</option>
+            <option 
+              value={{item}}
+              selected={{if (eq item (get model.data  (concat "" element.key))) true false}} 
+              >{{item}}</option>
           {{/each}}
         </select>
       {{else}}
