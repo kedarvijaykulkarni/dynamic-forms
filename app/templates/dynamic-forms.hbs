@@ -1,6 +1,7 @@
 {{outlet}}
 
-<form action={{model.lastObject.actions.submit}}>
+<form id="dynamic-form" {{action "onSubmit" on="submit"}}>
+  {{!-- <form action={{model.jsonform.lastObject.actions.submit}}> --}}
   {{#each elements as |element|}}
     <p>
       <label for={{element.id}}>{{element.title}}</label><br>
@@ -11,7 +12,8 @@
             class="dib" 
             checked={{if (eq item (get model.data  (concat "" element.key))) true false}}
             name={{element.key}}
-            value={{item}}> {{item}} <br/>
+            value={{item}}>
+          {{item}} <br>
 
         {{/each}}
       {{else if (eq element.type "select")}}
@@ -20,7 +22,9 @@
             <option 
               value={{item}}
               selected={{if (eq item (get model.data  (concat "" element.key))) true false}} 
-              >{{item}}</option>
+              >
+              {{item}}
+            </option>
           {{/each}}
         </select>
       {{else}}
@@ -37,7 +41,5 @@
       {{/if}}
     </p>
   {{/each}}
-  <button type="submit">Ok</button>
+  <button type="submit" {{action "onSubmit"}}>Ok</button>
 </form>
-
-

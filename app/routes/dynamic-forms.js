@@ -70,7 +70,7 @@ const jsonform = [
       },
       {
         "actions": {
-          "submit": "submit-application"
+          "submit": "submit-data"
         }
       }
     ];
